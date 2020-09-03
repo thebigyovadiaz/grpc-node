@@ -1,0 +1,17 @@
+{
+  "name": "grpc-node",
+  "version": "1.0.0",
+  "description": "Create Server gRPC and NodeJS",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Yovanny Diaz <thebigyovadiaz@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "@grpc/proto-loader": "^0.5.5",
+    "grpc": "^1.24.3",
+    "uuid": "^8.3.0"
+  }
+}
