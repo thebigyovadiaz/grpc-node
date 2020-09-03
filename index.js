@@ -1,6 +1,6 @@
 const grpc = require("grpc");
 const notesProto = grpc.load("notes.proto");
-const uuidv1 = require("uuid");
+const { v1: uuidv1 } = require("uuid");
 
 const notes = [
   { id: '1', title: "Note 1", content: "Content 1" },
@@ -15,7 +15,7 @@ server.addService(notesProto.NoteService.service, {
   },
   insert: (call, callback) => {
     let note = call.request;
-    note.id = "4";
+    note.id = uuidv1();
     notes.push(note);
     callback(null, note);
   },
